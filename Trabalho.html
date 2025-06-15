@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>S0L1DÁRIO - Doações e Reutilização</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth; /* Rolagem suave para a navegação */
+        }
+        /* Barra de rolagem personalizada para melhor estética */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Navbar -->
+    <nav class="bg-white shadow-md sticky top-0 z-50 p-4">
+        <div class="container mx-auto flex justify-between items-center flex-wrap">
+            <a href="#" class="text-2xl font-bold text-blue-600 rounded-lg p-2 hover:bg-blue-50 transition duration-300">S0L1DÁRIO</a>
+            <div class="hidden md:flex space-x-6">
+                <a href="#inicio" class="text-gray-600 hover:text-blue-600 font-medium transition duration-300 rounded-lg p-2 hover:bg-blue-50">Início</a>
+                <a href="#sobre" class="text-gray-600 hover:text-blue-600 font-medium transition duration-300 rounded-lg p-2 hover:bg-blue-50">Sobre Nós</a>
+                <a href="#como-funciona" class="text-gray-600 hover:text-blue-600 font-medium transition duration-300 rounded-lg p-2 hover:bg-blue-50">Como Funciona</a>
+                <a href="#funcionalidades" class="text-gray-600 hover:text-blue-600 font-medium transition duration-300 rounded-lg p-2 hover:bg-blue-50">Funcionalidades</a>
+                <a href="#app-simulacao" class="text-gray-600 hover:text-blue-600 font-medium transition duration-300 rounded-lg p-2 hover:bg-blue-50">Ver o Aplicativo</a>
+                <a href="#impacto" class="text-gray-600 hover:text-blue-600 font-medium transition duration-300 rounded-lg p-2 hover:bg-blue-50">Nosso Impacto</a>
+                <a href="#futuro" class="text-gray-600 hover:text-blue-600 font-medium transition duration-300 rounded-lg p-2 hover:bg-blue-50">Visão Futura</a>
+            </div>
+            <!-- Botão do Menu Mobile -->
+            <button id="mobile-menu-button" class="md:hidden p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                <svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+        </div>
+        <!-- Menu Mobile -->
+        <div id="mobile-menu" class="md:hidden hidden flex flex-col space-y-2 mt-4">
+            <a href="#inicio" class="text-gray-600 hover:text-blue-600 font-medium transition duration-300 rounded-lg p-2 hover:bg-blue-50">Início</a>
+            <a href="#sobre" class="text-gray-600 hover:text-blue-600 font-medium transition duration-300 rounded-lg p-2 hover:bg-blue-50">Sobre Nós</a>
+            <a href="#como-funciona" class="text-gray-600 hover:text-blue-600 font-medium transition duration-300 rounded-lg p-2 hover:bg-blue-50">Como Funciona</a>
+            <a href="#funcionalidades" class="text-gray-600 hover:text-blue-600 font-medium transition duration-300 rounded-lg p-2 hover:bg-blue-50">Funcionalidades</a>
+            <a href="#app-simulacao" class="text-gray-600 hover:text-blue-600 font-medium transition duration-300 rounded-lg p-2 hover:bg-blue-50">Ver o Aplicativo</a>
+            <a href="#impacto" class="text-gray-600 hover:text-blue-600 font-medium transition duration-300 rounded-lg p-2 hover:bg-blue-50">Nosso Impacto</a>
+            <a href="#futuro" class="text-gray-600 hover:text-blue-600 font-medium transition duration-300 rounded-lg p-2 hover:bg-blue-50">Visão Futura</a>
+        </div>
+    </nav>
+
+    <!-- Seção Principal (Hero) -->
+    <section id="inicio" class="relative bg-gradient-to-r from-blue-500 to-indigo-600 text-white py-20 md:py-32 flex items-center justify-center min-h-screen">
+        <div class="container mx-auto text-center px-4">
+            <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-6 animate-fade-in-down">
+                S0L1DÁRIO: Conectando Doadores e Necessidades
+            </h1>
+            <p class="text-lg md:text-2xl mb-8 opacity-90 animate-fade-in-up">
+                Um mundo onde nada se perde, tudo se transforma em solidariedade.
+            </p>
+            <div class="flex flex-col md:flex-row justify-center space-y-4 md:space-y-0 md:space-x-4">
+                <a href="#sobre" class="bg-white text-blue-600 px-8 py-3 rounded-full font-semibold shadow-lg hover:bg-gray-100 hover:scale-105 transition duration-300">
+                    Descubra Nossa Missão
+                </a>
+                <a href="#app-simulacao" class="bg-transparent border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-blue-600 hover:scale-105 transition duration-300">
+                    Ver o Aplicativo
+                </a>
+            </div>
+        </div>
+        <!-- Elementos de Fundo para Estética -->
+        <div class="absolute inset-0 z-0">
+            <svg class="w-full h-full opacity-10" viewBox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" stop-color="#4F46E5" />
+                        <stop offset="100%" stop-color="#3B82F6" />
+                    </linearGradient>
+                </defs>
+                <path fill="url(#gradient)" fill-opacity="0.8" d="M0,192L48,192C96,192,192,192,288,170.7C384,149,480,107,576,106.7C672,107,768,149,864,160C960,171,1056,149,1152,149.3C1248,149,1344,171,1392,181.3L1440,192L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Seção Sobre Nós / Nossa Missão -->
+    <section id="sobre" class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center gap-10">
+            <div class="md:w-1/2">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Sobre o S0L1DÁRIO</h2>
+                <p class="text-lg text-gray-700 leading-relaxed mb-4">
+                    Na sociedade atual, observamos um **consumo excessivo** e o **descarte precoce de objetos** ainda em bom estado. Ao mesmo tempo, muitas pessoas enfrentam dificuldades para acessar itens básicos.
+                </p>
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Nosso projeto surge como uma **ponte entre o desperdício e a necessidade**, promovendo o consumo consciente, a empatia e um impacto social e ambiental positivo. O **S0L1DÁRIO** é uma iniciativa que une tecnologia e solidariedade para facilitar a doação e reutilização de itens, focando em usabilidade e acessibilidade para transformar comunidades.
+                </p>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <img src="https://placehold.co/400x300/e0f2fe/0c4a6e?text=Doações+Conscientes" alt="Imagem Ilustrativa de Doações" class="rounded-xl shadow-2xl transform hover:scale-105 transition duration-300">
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Como Funciona -->
+    <section id="como-funciona" class="py-16 md:py-24 bg-blue-50">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-8">Como Funciona o S0L1DÁRIO?</h2>
+            <p class="text-lg text-gray-700 mb-10 max-w-4xl mx-auto">
+                Nosso aplicativo simplifica o processo de doação e recebimento de itens, conectando pessoas de forma eficiente e segura.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center text-center border-b-4 border-blue-400 hover:shadow-xl transition duration-300">
+                    <div class="text-blue-600 text-5xl mb-4">✨</div> <!-- Icone de Brilho/Novo -->
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">1. Doe Online</h3>
+                    <p class="text-gray-700">Anuncie gratuitamente itens que não usa mais, mas que ainda têm utilidade, diretamente pelo aplicativo. Adicione fotos e descrições.</p>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center text-center border-b-4 border-blue-400 hover:shadow-xl transition duration-300">
+                    <div class="text-blue-600 text-5xl mb-4">📍</div> <!-- Icone de Localização -->
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">2. Centros de Contribuição</h3>
+                    <p class="text-gray-700">Ou faça doações presenciais em nossos centros. Os itens são avaliados e cadastrados na plataforma para a comunidade.</p>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center text-center border-b-4 border-blue-400 hover:shadow-xl transition duration-300">
+                    <div class="text-blue-600 text-5xl mb-4">🤝</div> <!-- Icone de Aperto de Mãos -->
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">3. Conecte-se e Receba</h3>
+                    <p class="text-gray-700">Interaja via chat com doadores ou reserve itens nos centros de contribuição para retirada fácil e rápida.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Funcionalidades e Tecnologia -->
+    <section id="funcionalidades" class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-12">Funcionalidades do App e Tecnologia</h2>
+            <div class="flex flex-col lg:flex-row gap-10">
+                <div class="lg:w-1/2 bg-gray-100 rounded-xl shadow-lg p-8 border-t-4 border-blue-600">
+                    <h3 class="text-2xl font-semibold text-gray-900 mb-4">Principais Recursos do Aplicativo</h3>
+                    <ul class="list-disc list-inside space-y-3 text-lg text-gray-700">
+                        <li class="flex items-start">
+                            <span class="text-blue-500 text-xl mr-2">✓</span> Cadastro/login de usuários intuitivo
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-blue-500 text-xl mr-2">✓</span> Publicação de itens com imagens de alta qualidade e descrições detalhadas
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-blue-500 text-xl mr-2">✓</span> Busca avançada com filtros por categoria e localização
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-blue-500 text-xl mr-2">✓</span> Chat interno para comunicação segura entre usuários
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-blue-500 text-xl mr-2">✓</span> Geolocalização dos centros de contribuição para fácil acesso
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-blue-500 text-xl mr-2">✓</span> Sistema de reserva de itens para garantir a disponibilidade
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-blue-500 text-xl mr-2">✓</span> Painel administrativo para gestão eficiente da plataforma
+                        </li>
+                    </ul>
+                </div>
+                <div class="lg:w-1/2 bg-gray-100 rounded-xl shadow-lg p-8 border-t-4 border-blue-600">
+                    <h3 class="text-2xl font-semibold text-gray-900 mb-4 text-center">Tecnologias de Ponta</h3>
+                    <p class="text-lg text-gray-700 leading-relaxed mb-6 text-center">
+                        Para o desenvolvimento do S0L1DÁRIO, utilizamos as melhores tecnologias para garantir performance, escalabilidade e uma excelente experiência de usuário.
+                    </p>
+                    <div class="flex flex-wrap justify-center gap-6 text-xl font-medium text-blue-700">
+                        <span class="bg-blue-200 py-2 px-4 rounded-full shadow-md hover:bg-blue-300 transition duration-300">Flutter</span>
+                        <span class="bg-blue-200 py-2 px-4 rounded-full shadow-md hover:bg-blue-300 transition duration-300">Node.js</span>
+                        <span class="bg-blue-200 py-2 px-4 rounded-full shadow-md hover:bg-300 transition duration-300">Firebase</span>
+                        <span class="bg-blue-200 py-2 px-4 rounded-full shadow-md hover:bg-blue-300 transition duration-300">Google Maps API</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Nova Seção: Simulação do Aplicativo Web -->
+    <section id="app-simulacao" class="py-16 md:py-24 bg-gray-100">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-8">Explore o Aplicativo S0L1DÁRIO (Versão Web)</h2>
+            <p class="text-lg text-gray-700 mb-10 max-w-4xl mx-auto">
+                Esta é uma simulação interativa de como nosso aplicativo funcionaria na web. Navegue e veja a simplicidade de doar e encontrar itens!
+            </p>
+
+            <!-- Contêiner do App (simulando tela de celular/tablet) -->
+            <div class="relative bg-white rounded-3xl shadow-2xl overflow-hidden mx-auto w-full max-w-md h-[600px] border-8 border-gray-300">
+                <!-- Cabeçalho do App -->
+                <div class="bg-blue-600 text-white p-4 flex justify-between items-center">
+                    <span class="text-lg font-semibold">S0L1DÁRIO</span>
+                    <input type="text" placeholder="Buscar itens..." class="bg-blue-700 text-white placeholder-blue-200 rounded-full py-1 px-3 text-sm w-3/5 focus:outline-none focus:ring-1 focus:ring-white">
+                </div>
+
+                <!-- Área de Conteúdo Principal -->
+                <div class="p-4 overflow-y-auto h-[calc(100%-100px)]"> <!-- Ajusta a altura para cabeçalho + rodapé -->
+                    <!-- Card de Item 1 -->
+                    <div class="bg-white rounded-xl shadow-md p-4 mb-4 border border-gray-200">
+                        <img src="https://placehold.co/300x200/a8dadc/1d3557?text=Mesa+Escritório" alt="Mesa de Escritório" class="w-full h-40 object-cover rounded-md mb-3">
+                        <h4 class="text-lg font-semibold text-gray-900">Mesa de Escritório Usada</h4>
+                        <p class="text-sm text-gray-600 mb-3">Mesa grande em bom estado, ideal para home office. Leves marcas de uso. Retirada em SP.</p>
+                        <button class="btn-reservar bg-green-500 text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-green-600 transition duration-300 w-full" data-item="Mesa de Escritório">Reservar</button>
+                    </div>
+
+                    <!-- Card de Item 2 -->
+                    <div class="bg-white rounded-xl shadow-md p-4 mb-4 border border-gray-200">
+                        <img src="https://placehold.co/300x200/fecaca/991b1b?text=Livros+Infantis" alt="Livros Infantis" class="w-full h-40 object-cover rounded-md mb-3">
+                        <h4 class="text-lg font-semibold text-gray-900">Coleção de Livros Infantis</h4>
+                        <p class="text-sm text-gray-600 mb-3">Diversos títulos infantis, em excelente estado. Perfeito para novas histórias. Retirada no centro.</p>
+                        <button class="btn-reservar bg-green-500 text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-green-600 transition duration-300 w-full" data-item="Coleção de Livros Infantis">Reservar</button>
+                    </div>
+
+                    <!-- Card de Item 3 -->
+                    <div class="bg-white rounded-xl shadow-md p-4 mb-4 border border-gray-200">
+                        <img src="https://placehold.co/300x200/bfdbfe/1e3a8a?text=Cadeira+Gamer" alt="Cadeira Gamer" class="w-full h-40 object-cover rounded-md mb-3">
+                        <h4 class="text-lg font-semibold text-gray-900">Cadeira Gamer Ergonômica</h4>
+                        <p class="text-sm text-gray-600 mb-3">Cadeira confortável para longas horas de uso. Pouco usada, como nova. Envio a combinar.</p>
+                        <button class="btn-reservar bg-green-500 text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-green-600 transition duration-300 w-full" data-item="Cadeira Gamer Ergonômica">Reservar</button>
+                    </div>
+                </div>
+
+                <!-- Navegação do Rodapé do App -->
+                <div class="absolute bottom-0 left-0 right-0 bg-blue-600 text-white flex justify-around p-3 shadow-inner">
+                    <button class="flex flex-col items-center text-sm font-medium hover:text-blue-200 transition duration-300">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"></path></svg>
+                        <span>Início</span>
+                    </button>
+                    <button id="btn-publicar-item" class="flex flex-col items-center text-sm font-medium hover:text-blue-200 transition duration-300">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"></path></svg>
+                        <span>Publicar</span>
+                    </button>
+                    <button id="btn-chat" class="flex flex-col items-center text-sm font-medium hover:text-blue-200 transition duration-300">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z"></path></svg>
+                        <span>Chat</span>
+                    </button>
+                    <button class="flex flex-col items-center text-sm font-medium hover:text-blue-200 transition duration-300">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"></path></svg>
+                        <span>Perfil</span>
+                    </button>
+                </div>
+            </div>
+            <!-- Caixa de Mensagem Simples para Interações (em vez de alert) -->
+            <div id="message-box" class="fixed inset-0 bg-gray-900 bg-opacity-50 flex items-center justify-center hidden z-50">
+                <div class="bg-white p-6 rounded-lg shadow-xl text-center max-w-sm w-full">
+                    <h3 id="message-title" class="text-xl font-semibold text-gray-800 mb-4"></h3>
+                    <p id="message-content" class="text-gray-700 mb-6"></p>
+                    <button id="message-close-btn" class="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition duration-300">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Nosso Impacto -->
+    <section id="impacto" class="py-16 md:py-24 bg-blue-50">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-8">Nosso Impacto na Comunidade</h2>
+            <div class="max-w-4xl mx-auto bg-white rounded-xl shadow-lg p-8 border-l-4 border-green-500 transform hover:translate-y-2 transition duration-300">
+                <p class="text-lg md:text-xl text-gray-700 leading-relaxed mb-4">
+                    O S0L1DÁRIO promove ativamente o **reaproveitamento** e a **solidariedade**, combatendo o desperdício e auxiliando quem mais precisa. Nosso objetivo é criar um impacto social e ambiental positivo, incentivando o consumo consciente e a empatia.
+                </p>
+                <p class="text-lg md:text-xl text-gray-700 leading-relaxed">
+                    Através da nossa plataforma, aspiramos a construir comunidades mais sustentáveis e conectadas, onde a generosidade é facilitada pela tecnologia.
+                </p>
+            </div>
+            <div class="mt-12 flex justify-center">
+                <img src="https://www.weg.net/weghome/wp-content/uploads/2018/02/negocios-de-impacto-social-960x433.jpg" alt="Imagem de Impacto Social" class="rounded-xl shadow-2xl transform hover:scale-105 transition duration-300 max-w-full h-auto">
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Visão Futura -->
+    <section id="futuro" class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-12">Visão Futura para o S0L1DÁRIO</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-gray-100 rounded-xl shadow-lg p-6 border-t-4 border-indigo-500">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Versão Web</h3>
+                    <p class="text-gray-700">Desenvolvimento de uma versão web completa do aplicativo para expandir o acesso e a conveniência.</p>
+                </div>
+                <div class="bg-gray-100 rounded-xl shadow-lg p-6 border-t-4 border-indigo-500">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Programa de Benefícios</h3>
+                    <p class="text-700">Implementação de um programa de benefícios para incentivar e recompensar os usuários ativos e engajados.</p>
+                </div>
+                <div class="bg-gray-100 rounded-xl shadow-lg p-6 border-t-4 border-indigo-500">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Sistema de Avaliação</h3>
+                    <p class="text-gray-700">Criação de um sistema de avaliação entre usuários para aumentar a segurança e identificar a reputação na plataforma.</p>
+                </div>
+                <div class="bg-gray-100 rounded-xl shadow-lg p-6 border-t-4 border-indigo-500">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Expansão Geográfica</h3>
+                    <p class="text-gray-700">Expansão do aplicativo por todo o território brasileiro e, futuramente, internacionalmente, alcançando mais comunidades.</p>
+                </div>
+                <div class="bg-gray-100 rounded-xl shadow-lg p-6 border-t-4 border-indigo-500 md:col-span-2 lg:col-span-1">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Parcerias Estratégicas</h3>
+                    <p class="text-gray-700">Formação de parcerias sólidas com prefeituras e ONGs para aumentar o impacto social e a abrangência do aplicativo.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Chamada para Ação / Conclusão -->
+    <section id="chamada-para-acao" class="py-16 md:py-24 bg-gradient-to-r from-blue-600 to-indigo-700 text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-5xl font-extrabold mb-8">Junte-se ao S0L1DÁRIO!</h2>
+            <p class="text-lg md:text-xl leading-relaxed max-w-4xl mx-auto mb-10">
+                Seja parte desta iniciativa social que conecta tecnologia e solidariedade para um futuro mais consciente e generoso. O sucesso do S0L1DÁRIO depende do seu engajamento!
+            </p>
+            <a href="#inicio" class="inline-block bg-white text-blue-600 px-8 py-4 rounded-full font-semibold shadow-lg hover:bg-gray-100 hover:scale-105 transition duration-300">
+                Voltar ao Topo
+            </a>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto text-center px-4">
+            <p class="text-sm">&copy; 2023 S0L1DÁRIO. Todos os direitos reservados.</p>
+            <p class="text-xs mt-2 opacity-75">Com amor, para um mundo mais solidário.</p>
+        </div>
+    </footer>
+
+    <!-- Adiciona a referência ao arquivo JavaScript externo -->
+    <!-- É boa prática colocar scripts que manipulam o DOM no final do <body> -->
+    <script src="teste.js"></script>
+</body>
+</html>
