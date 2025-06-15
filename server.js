@@ -1,64 +1,66 @@
-// server.js
-const http = require('http'); // Importa o módulo HTTP nativo do Node.js
-const fs = require('fs');     // Importa o módulo File System para trabalhar com arquivos
-const path = require('path');   // Importa o módulo Path para lidar com caminhos de arquivo
+// script.js
 
-const PORT = process.env.PORT || 3000; // Define a porta do servidor, usando a variável de ambiente PORT se disponível, senão 3000
+// Mobile Menu Functionality
+document.addEventListener('DOMContentLoaded', () => {
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
 
-// Cria o servidor HTTP
-const server = http.createServer((req, res) => {
-    // Determina o caminho do arquivo solicitado.
-    // Se a URL for '/', serve Trabalho.html. Caso contrário, serve o arquivo correspondente.
-    let filePath = '.' + req.url;
-    if (filePath === './') {
-        filePath = './Trabalho.html'; // Se a requisição for para a raiz, serve o Trabalho.html
+    if (mobileMenuButton && mobileMenu) {
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when a link is clicked
+        const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+        mobileMenuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
     }
 
-    // Determina o tipo de conteúdo (MIME type) com base na extensão do arquivo
-    const extname = String(path.extname(filePath)).toLowerCase();
-    const mimeTypes = {
-        '.html': 'text/html',
-        '.js': 'text/javascript',
-        '.css': 'text/css',
-        '.json': 'application/json',
-        '.png': 'image/png',
-        '.jpg': 'image/jpg',
-        '.gif': 'image/gif',
-        '.svg': 'image/svg+xml',
-        '.wav': 'audio/wav',
-        '.mp4': 'video/mp4',
-        '.woff': 'application/font-woff',
-        '.ttf': 'application/font-ttf',
-        '.eot': 'application/vnd.ms-fontobject',
-        '.otf': 'application/font-otf',
-        '.wasm': 'application/wasm'
-    };
+    // App Simulation Button Functionality (Reservation, Publish, Chat)
+    const messageBox = document.getElementById('message-box');
+    const messageTitle = document.getElementById('message-title');
+    const messageContent = document.getElementById('message-content');
+    const messageCloseBtn = document.getElementById('message-close-btn');
 
-    let contentType = mimeTypes[extname] || 'application/octet-stream'; // Tipo padrão se não for reconhecido
+    function showMessage(title, content) {
+        messageTitle.textContent = title;
+        messageContent.textContent = content;
+        messageBox.classList.remove('hidden');
+    }
 
-    // Lê o arquivo do sistema de arquivos
-    fs.readFile(filePath, (error, content) => {
-        if (error) {
-            if (error.code == 'ENOENT') {
-                // Se o arquivo não for encontrado (Error No Entry)
-                res.writeHead(404, { 'Content-Type': 'text/html' });
-                res.end('<h1>404 Not Found</h1>', 'utf-8');
-            } else {
-                // Outro erro de servidor
-                res.writeHead(500);
-                res.end('Sorry, check with the site admin for error: ' + error.code + ' ..\n');
-            }
-        } else {
-            // Se o arquivo for encontrado com sucesso
-            res.writeHead(200, { 'Content-Type': contentType });
-            res.end(content, 'utf-8');
-        }
+    function hideMessageBox() {
+        messageBox.classList.add('hidden');
+    }
+
+    if (messageCloseBtn) {
+        messageCloseBtn.addEventListener('click', hideMessageBox);
+    }
+
+    // Handle "Reservar" buttons
+    const reserveButtons = document.querySelectorAll('.btn-reservar');
+    reserveButtons.forEach(button => {
+        button.addEventListener('click', (event) => {
+            const itemName = event.target.dataset.item;
+            showMessage('Item Reservado!', `Você reservou com sucesso "${itemName}". Em breve entraremos em contato para combinar a retirada.`);
+        });
     });
-});
 
-// Faz o servidor escutar na porta definida
-server.listen(PORT, () => {
-    console.log(`Servidor rodando em http://localhost:${PORT}/`);
-    console.log('Acesse seu site pelo link que o Codespaces vai gerar.');
-});
+    // Handle "Publicar" button
+    const publishItemBtn = document.getElementById('btn-publicar-item');
+    if (publishItemBtn) {
+        publishItemBtn.addEventListener('click', () => {
+            showMessage('Publicar Item', 'Funcionalidade de publicação de itens em desenvolvimento. Em breve você poderá anunciar suas doações aqui!');
+        });
+    }
 
+    // Handle "Chat" button
+    const chatBtn = document.getElementById('btn-chat');
+    if (chatBtn) {
+        chatBtn.addEventListener('click', () => {
+            showMessage('Chat S0L1DÁRIO', 'O chat está disponível para você se comunicar com outros usuários e coordenar doações. Mantenha a boa vizinhança!');
+        });
+    }
+});
