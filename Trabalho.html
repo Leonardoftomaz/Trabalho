@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>S0L1DÁRIO - Doações e Reutilização</title>
-    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
@@ -31,7 +30,6 @@
 </head>
 <body class="bg-gray-50 text-gray-800">
 
-    <!-- Navbar -->
     <nav class="bg-white shadow-md sticky top-0 z-50 p-4">
         <div class="container mx-auto flex justify-between items-center flex-wrap">
             <a href="#" class="text-2xl font-bold text-blue-600 rounded-lg p-2 hover:bg-blue-50 transition duration-300">S0L1DÁRIO</a>
@@ -44,14 +42,12 @@
                 <a href="#impacto" class="text-gray-600 hover:text-blue-600 font-medium transition duration-300 rounded-lg p-2 hover:bg-blue-50">Nosso Impacto</a>
                 <a href="#futuro" class="text-gray-600 hover:text-blue-600 font-medium transition duration-300 rounded-lg p-2 hover:bg-blue-50">Visão Futura</a>
             </div>
-            <!-- Botão do Menu Mobile -->
             <button id="mobile-menu-button" class="md:hidden p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
                 <svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
                 </svg>
             </button>
         </div>
-        <!-- Menu Mobile -->
         <div id="mobile-menu" class="md:hidden hidden flex flex-col space-y-2 mt-4">
             <a href="#inicio" class="text-gray-600 hover:text-blue-600 font-medium transition duration-300 rounded-lg p-2 hover:bg-blue-50">Início</a>
             <a href="#sobre" class="text-gray-600 hover:text-blue-600 font-medium transition duration-300 rounded-lg p-2 hover:bg-blue-50">Sobre Nós</a>
@@ -63,7 +59,6 @@
         </div>
     </nav>
 
-    <!-- Seção Principal (Hero) -->
     <section id="inicio" class="relative bg-gradient-to-r from-blue-500 to-indigo-600 text-white py-20 md:py-32 flex items-center justify-center min-h-screen">
         <div class="container mx-auto text-center px-4">
             <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-6 animate-fade-in-down">
@@ -81,7 +76,6 @@
                 </a>
             </div>
         </div>
-        <!-- Elementos de Fundo para Estética -->
         <div class="absolute inset-0 z-0">
             <svg class="w-full h-full opacity-10" viewBox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg">
                 <defs>
@@ -95,7 +89,6 @@
         </div>
     </section>
 
-    <!-- Seção Sobre Nós / Nossa Missão -->
     <section id="sobre" class="py-16 md:py-24 bg-white">
         <div class="container mx-auto px-4 flex flex-col md:flex-row items-center gap-10">
             <div class="md:w-1/2">
@@ -113,7 +106,6 @@
         </div>
     </section>
 
-    <!-- Seção Como Funciona -->
     <section id="como-funciona" class="py-16 md:py-24 bg-blue-50">
         <div class="container mx-auto px-4 text-center">
             <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-8">Como Funciona o S0L1DÁRIO?</h2>
@@ -122,25 +114,21 @@
             </p>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center text-center border-b-4 border-blue-400 hover:shadow-xl transition duration-300">
-                    <div class="text-blue-600 text-5xl mb-4">✨</div> <!-- Icone de Brilho/Novo -->
-                    <h3 class="text-xl font-semibold text-gray-900 mb-3">1. Doe Online</h3>
+                    <div class="text-blue-600 text-5xl mb-4">✨</div> <h3 class="text-xl font-semibold text-gray-900 mb-3">1. Doe Online</h3>
                     <p class="text-gray-700">Anuncie gratuitamente itens que não usa mais, mas que ainda têm utilidade, diretamente pelo aplicativo. Adicione fotos e descrições.</p>
                 </div>
                 <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center text-center border-b-4 border-blue-400 hover:shadow-xl transition duration-300">
-                    <div class="text-blue-600 text-5xl mb-4">📍</div> <!-- Icone de Localização -->
-                    <h3 class="text-xl font-semibold text-gray-900 mb-3">2. Centros de Contribuição</h3>
+                    <div class="text-blue-600 text-5xl mb-4">📍</div> <h3 class="text-xl font-semibold text-gray-900 mb-3">2. Centros de Contribuição</h3>
                     <p class="text-gray-700">Ou faça doações presenciais em nossos centros. Os itens são avaliados e cadastrados na plataforma para a comunidade.</p>
                 </div>
                 <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center text-center border-b-4 border-blue-400 hover:shadow-xl transition duration-300">
-                    <div class="text-blue-600 text-5xl mb-4">🤝</div> <!-- Icone de Aperto de Mãos -->
-                    <h3 class="text-xl font-semibold text-gray-900 mb-3">3. Conecte-se e Receba</h3>
+                    <div class="text-blue-600 text-5xl mb-4">🤝</div> <h3 class="text-xl font-semibold text-gray-900 mb-3">3. Conecte-se e Receba</h3>
                     <p class="text-gray-700">Interaja via chat com doadores ou reserve itens nos centros de contribuição para retirada fácil e rápida.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Seção de Funcionalidades e Tecnologia -->
     <section id="funcionalidades" class="py-16 md:py-24 bg-white">
         <div class="container mx-auto px-4">
             <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-12">Funcionalidades do App e Tecnologia</h2>
@@ -187,7 +175,6 @@
         </div>
     </section>
 
-    <!-- Nova Seção: Simulação do Aplicativo Web -->
     <section id="app-simulacao" class="py-16 md:py-24 bg-gray-100">
         <div class="container mx-auto px-4 text-center">
             <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-8">Explore o Aplicativo S0L1DÁRIO (Versão Web)</h2>
@@ -195,25 +182,19 @@
                 Esta é uma simulação interativa de como nosso aplicativo funcionaria na web. Navegue e veja a simplicidade de doar e encontrar itens!
             </p>
 
-            <!-- Contêiner do App (simulando tela de celular/tablet) -->
             <div class="relative bg-white rounded-3xl shadow-2xl overflow-hidden mx-auto w-full max-w-md h-[600px] border-8 border-gray-300">
-                <!-- Cabeçalho do App -->
                 <div class="bg-blue-600 text-white p-4 flex justify-between items-center">
                     <span class="text-lg font-semibold">S0L1DÁRIO</span>
                     <input type="text" placeholder="Buscar itens..." class="bg-blue-700 text-white placeholder-blue-200 rounded-full py-1 px-3 text-sm w-3/5 focus:outline-none focus:ring-1 focus:ring-white">
                 </div>
 
-                <!-- Área de Conteúdo Principal -->
-                <div class="p-4 overflow-y-auto h-[calc(100%-100px)]"> <!-- Ajusta a altura para cabeçalho + rodapé -->
-                    <!-- Card de Item 1 -->
-                    <div class="bg-white rounded-xl shadow-md p-4 mb-4 border border-gray-200">
+                <div class="p-4 overflow-y-auto h-[calc(100%-100px)]"> <div class="bg-white rounded-xl shadow-md p-4 mb-4 border border-gray-200">
                         <img src="https://placehold.co/300x200/a8dadc/1d3557?text=Mesa+Escritório" alt="Mesa de Escritório" class="w-full h-40 object-cover rounded-md mb-3">
                         <h4 class="text-lg font-semibold text-gray-900">Mesa de Escritório Usada</h4>
                         <p class="text-sm text-gray-600 mb-3">Mesa grande em bom estado, ideal para home office. Leves marcas de uso. Retirada em SP.</p>
                         <button class="btn-reservar bg-green-500 text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-green-600 transition duration-300 w-full" data-item="Mesa de Escritório">Reservar</button>
                     </div>
 
-                    <!-- Card de Item 2 -->
                     <div class="bg-white rounded-xl shadow-md p-4 mb-4 border border-gray-200">
                         <img src="https://placehold.co/300x200/fecaca/991b1b?text=Livros+Infantis" alt="Livros Infantis" class="w-full h-40 object-cover rounded-md mb-3">
                         <h4 class="text-lg font-semibold text-gray-900">Coleção de Livros Infantis</h4>
@@ -221,7 +202,6 @@
                         <button class="btn-reservar bg-green-500 text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-green-600 transition duration-300 w-full" data-item="Coleção de Livros Infantis">Reservar</button>
                     </div>
 
-                    <!-- Card de Item 3 -->
                     <div class="bg-white rounded-xl shadow-md p-4 mb-4 border border-gray-200">
                         <img src="https://placehold.co/300x200/bfdbfe/1e3a8a?text=Cadeira+Gamer" alt="Cadeira Gamer" class="w-full h-40 object-cover rounded-md mb-3">
                         <h4 class="text-lg font-semibold text-gray-900">Cadeira Gamer Ergonômica</h4>
@@ -230,7 +210,6 @@
                     </div>
                 </div>
 
-                <!-- Navegação do Rodapé do App -->
                 <div class="absolute bottom-0 left-0 right-0 bg-blue-600 text-white flex justify-around p-3 shadow-inner">
                     <button class="flex flex-col items-center text-sm font-medium hover:text-blue-200 transition duration-300">
                         <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"></path></svg>
@@ -250,7 +229,6 @@
                     </button>
                 </div>
             </div>
-            <!-- Caixa de Mensagem Simples para Interações (em vez de alert) -->
             <div id="message-box" class="fixed inset-0 bg-gray-900 bg-opacity-50 flex items-center justify-center hidden z-50">
                 <div class="bg-white p-6 rounded-lg shadow-xl text-center max-w-sm w-full">
                     <h3 id="message-title" class="text-xl font-semibold text-gray-800 mb-4"></h3>
@@ -261,7 +239,6 @@
         </div>
     </section>
 
-    <!-- Seção Nosso Impacto -->
     <section id="impacto" class="py-16 md:py-24 bg-blue-50">
         <div class="container mx-auto px-4 text-center">
             <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-8">Nosso Impacto na Comunidade</h2>
@@ -279,7 +256,6 @@
         </div>
     </section>
 
-    <!-- Seção Visão Futura -->
     <section id="futuro" class="py-16 md:py-24 bg-white">
         <div class="container mx-auto px-4">
             <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-12">Visão Futura para o S0L1DÁRIO</h2>
@@ -308,7 +284,6 @@
         </div>
     </section>
 
-    <!-- Seção de Chamada para Ação / Conclusão -->
     <section id="chamada-para-acao" class="py-16 md:py-24 bg-gradient-to-r from-blue-600 to-indigo-700 text-white">
         <div class="container mx-auto px-4 text-center">
             <h2 class="text-3xl md:text-5xl font-extrabold mb-8">Junte-se ao S0L1DÁRIO!</h2>
@@ -321,7 +296,6 @@
         </div>
     </section>
 
-    <!-- Rodapé -->
     <footer class="bg-gray-800 text-white py-8">
         <div class="container mx-auto text-center px-4">
             <p class="text-sm">&copy; 2023 S0L1DÁRIO. Todos os direitos reservados.</p>
@@ -329,8 +303,75 @@
         </div>
     </footer>
 
-    <!-- Adiciona a referência ao arquivo JavaScript externo -->
-    <!-- É boa prática colocar scripts que manipulam o DOM no final do <body> -->
-    <script src="server.js"></script>
+    <script>
+        // Rolagem suave para links de navegação
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+
+                // Fecha o menu mobile, se estiver aberto
+                const mobileMenu = document.getElementById('mobile-menu');
+                if (!mobileMenu.classList.contains('hidden')) {
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+
+        // Funcionalidade de alternância do menu mobile
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Fecha o menu mobile ao clicar fora
+        document.addEventListener('click', (event) => {
+            if (!mobileMenu.contains(event.target) && !mobileMenuButton.contains(event.target) && !mobileMenu.classList.contains('hidden')) {
+                mobileMenu.classList.add('hidden');
+            }
+        });
+
+        // Lógica para a simulação do aplicativo
+        const messageBox = document.getElementById('message-box');
+        const messageTitle = document.getElementById('message-title');
+        const messageContent = document.getElementById('message-content');
+        const messageCloseBtn = document.getElementById('message-close-btn');
+
+        function showMessage(title, content) {
+            messageTitle.textContent = title;
+            messageContent.textContent = content;
+            messageBox.classList.remove('hidden');
+        }
+
+        messageCloseBtn.addEventListener('click', () => {
+            messageBox.classList.add('hidden');
+        });
+
+        document.querySelectorAll('.btn-reservar').forEach(button => {
+            button.addEventListener('click', (event) => {
+                const itemName = event.target.dataset.item;
+                showMessage('Item Reservado!', `Você reservou com sucesso o item "${itemName}". Em breve o doador entrará em contato.`);
+            });
+        });
+
+        const btnPublicarItem = document.getElementById('btn-publicar-item');
+        if (btnPublicarItem) {
+            btnPublicarItem.addEventListener('click', () => {
+                showMessage('Publicar Item', 'Esta função permitiria que você publique um novo item para doação. Em breve disponível!');
+            });
+        }
+
+        const btnChat = document.getElementById('btn-chat');
+        if (btnChat) {
+            btnChat.addEventListener('click', () => {
+                showMessage('Chat Interno', 'Esta função abriria o chat para você conversar com doadores ou interessados. Mantenha a comunicação ativa!');
+            });
+        }
+    </script>
 </body>
 </html>
