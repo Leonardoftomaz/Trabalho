@@ -2,9 +2,9 @@
   "name": "solidario-app",
   "version": "1.0.0",
   "description": "Aplicação S0L1DÁRIO para doações e reutilização",
-  "main": "script.js",
+  "main": "server.js",
   "scripts": {
-    "start": "node script.js"
+    "start": "node server.js"
   },
   "keywords": [],
   "author": "",
